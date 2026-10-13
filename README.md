@@ -57,41 +57,6 @@ Welcome to the **Vibe Coding Workshop** repository! This workshop introduces a m
 
 ---
 
-## 🎮 Hands-On Demo: 2048 Python Web App
-
-The repository includes a complete, production-ready **2048 Game** created through prompt engineering. It demonstrates full-stack web development with SQLite user persistence, auto-save state synchronization, and leaderboards.
-
-![2048 Game Preview](images/2048.png)
-
-### ⚡ 60-Second Quickstart with `uv`
-
-[`uv`](https://docs.astral.sh/uv/) is Astral's ultra-fast Python package and project manager. It handles virtual environments, Python binaries, and dependencies automatically without manual activation.
-
-```bash
-# Clone the repository (if you haven't already)
-git clone https://github.com/erolrecep/VibeCoding-Workshop.git
-cd VibeCoding-Workshop/2048
-
-# Run directly with uv
-uv run python app.py
-```
-
-*The Flask server starts and automatically launches your browser at `http://127.0.0.1:5000/`.*
-
-### 🛠️ Run via `make`
-
-If you have `make` installed:
-
-```bash
-cd 2048
-make run
-```
-*(The Makefile detects whether `uv` is installed and uses it; otherwise, it sets up a standard Python virtual environment automatically).*
-
-For detailed architecture, database schema, and customization challenges, see the **[2048 App README](file:///Users/erolrecep/Developer/codebase/apps/VibeCoding-Workshop/2048/README.md)**.
-
----
-
 ## 🖥️ Presentation Slides
 
 You can access and deliver the workshop presentation both online and offline.
@@ -140,6 +105,41 @@ chmod +x scripts/export_slides.sh
 # Preview exported site
 python3 -m http.server 8000 -d public
 ```
+
+---
+
+## 🎮 Hands-On Demo: 2048 Python Web App
+
+The repository includes a complete, production-ready **2048 Game** created through prompt engineering. It demonstrates full-stack web development with SQLite user persistence, auto-save state synchronization, and leaderboards.
+
+![2048 Game Preview](images/2048.png)
+
+### ⚡ 60-Second Quickstart with `uv`
+
+[`uv`](https://docs.astral.sh/uv/) is Astral's ultra-fast Python package and project manager. It handles virtual environments, Python binaries, and dependencies automatically without manual activation.
+
+```bash
+# Clone the repository (if you haven't already)
+git clone https://github.com/erolrecep/VibeCoding-Workshop.git
+cd VibeCoding-Workshop/2048
+
+# Run directly with uv
+uv run python app.py
+```
+
+*The Flask server starts and automatically launches your browser at `http://127.0.0.1:5000/`.*
+
+### 🛠️ Run via `make`
+
+If you have `make` installed:
+
+```bash
+cd 2048
+make run
+```
+*(The Makefile detects whether `uv` is installed and uses it; otherwise, it sets up a standard Python virtual environment automatically).*
+
+For detailed architecture, database schema, and customization challenges, see the **[2048 App README](file:///Users/erolrecep/Developer/codebase/apps/VibeCoding-Workshop/2048/README.md)**.
 
 ---
 
