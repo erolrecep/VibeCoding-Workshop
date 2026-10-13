@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Welcome to 2048</h1>
+<p>Enter your username to start a new game or resume an old one.</p>
+<form method="POST">
+    <input type="text" name="username" placeholder="Student Name" required>
+    <button type="submit">Play</button>
+</form>
+{% endblock %}
+

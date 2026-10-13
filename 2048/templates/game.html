@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Player: {{ username }} | Score: <span id="score">{{ score }}</span></h2>
+<div id="game-board"></div>
+<p class="instructions">Use Arrow Keys to slide tiles. Tiles with the same number merge into one!</p>
+
+<script>
+    // Inject Python variables directly into JavaScript
+    const USERNAME = "{{ username }}";
+    let grid = {{ grid | safe }};
+    let score = {{ score }};
+</script>
+<script src="{{ url_for('static', filename='game.js') }}"></script>
+{% endblock %}
+

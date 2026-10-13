@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Top 10 High Scores</h1>
+<table>
+    <tr><th>Rank</th><th>Player</th><th>Highest Score</th></tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ user['username'] }}</td>
+        <td>{{ user['best_score'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+

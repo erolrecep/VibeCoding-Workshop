@@ -1,0 +1,182 @@
+Vibe Coding Workshop
+Building at the Speed of Thought
+14 Oct 2026
+Tags: VibeCoding, PromptEngineering, LLMs, FutureOfWork
+
+* About Me
+
+.html about_me.html
+
+* Agenda
+
+- What is Vibe Coding?
+- How It Works?
+- Sample Project (2048 Game)
+- It's Your Turn! (Prompt Challenge)
+
+* What is Vibe Coding?
+
+    "There's a new kind of coding I call 'vibe coding', where you entirely give up the wheel to the AI and just speak your intent, copy-paste error messages, and guide the model."
+    — Andrej Karpathy
+
+.image images/karpathy_tweet.png
+
+.link https://x.com/karpathy/status/1886192184808149383
+
+* What is Vibe Coding?
+
+Zero Domain Knowledge Required
+\_ You can enter a domain (e.g., WebGL, Rust, Game Physics) with zero prior syntax knowledge. 
+\_ The LLM acts as the implementation layer while you focus on vision and UX.
+
+Exploration & Rapid Iteration
+\_ Rather than reading documentation for hours, you test ideas immediately by interacting with the model and reviewing live runtime feedback.
+\_ Request different actions from the model i.e fix this issue, make this more transparent, or make the image resize
+
+Automate Processes
+\_ File Operations
+\_ Send email, sms, social media post
+\_ Make shopping for me
+
+* How It Works? | Prompt
+
+.image images/prompt_flow.png _ 960
+
+
+* What is Prompt?
+
+A descriptive natural language statement 
+
+Passed to the LLM model
+
+Formulated to guide and interact with generative AI models
+
+
+* Anatomy of an Effective Prompt
+
+ Persona / Role: Defines the identity, expertise, or perspective the AI should adopt 
+ (e.g., “Act as an experienced financial analyst”)
+ 
+ Task / Goal: States the primary action or objective clearly and explicitly 
+ (e.g., “Summarize the core arguments” or “Generate an email template”)
+ 
+ Context: Supplies background information, target audience details, 
+ or reference data to ground the response
+ 
+ Input Data: Provides the specific text, dataset, or material the model needs to analyze or transform
+ 
+ Constraints & Warnings: Sets hard boundaries, negative rules, length limits, 
+ or things the model must avoid 
+ (e.g., “Keep under 200 words; do not invent statistics”)
+ 
+ Output Format: Specifies the structural layout of the result, 
+ such as bullet points, a markdown table, JSON, or step-by-step instructions
+ 
+ Examples (Few-Shot): Provides a pattern or sample input-output pair 
+ so the model mimics the exact style or format you want
+
+
+* Anatomy of an Effective Prompt
+
+Example Prompt:
+
+    Assume you're an experienced software engineer who is good at Python programming. 
+
+    I would like to develop a Python web app, the 2048 game. The tech stack for this project is 
+    Python programming language and Python libraries. 
+
+    Provide source code, running instructions, and Makefile that has all the steps to build 
+    the development environment, running the project and even cleaning the mess afterwards.
+
+
+
+* Anatomy of an Effective Prompt
+
+Example Prompt:
+
+    Act as a travel logistics expert. Construct a detailed travel plan 
+    to travel from Houston, TX to San Francisco, CA within a strict budget of $500.
+
+    Provide a breakdown of transportation options (air, rail, driving), 
+
+    approximate costs, trade-offs (time vs. cost), 
+
+    and top actionable tips for remaining within budget."
+
+* How It Works? | LLM Model
+
+.image images/prompt_flow.png _ 960
+
+* LLM Models | LMStudio Models
+
+.image images/llm_models_info.png _ 720
+
+* LLM Models
+
+What are LLMs Models?
+
+Machine learning models trained on vast piles of multimodal data (text, code, logs, binaries, images). 
+
+They construct a high-dimensional indexed environment capable of mapping context to complex code solutions.
+
+* LLM Models | Computing
+
+Steps of Building LLM Models
+- Pre-training & Training (Foundation Models)
+- Post-training & Alignment (Usually adjusted with Reinforcement Learning)
+- Fine-tuning (Better models for private data)
+- Real-time Inference (Google Gemini, ChatGPT, or local llms)
+
+
+* LLM Models | Data Center View
+
+.image images/datacenter.jpg _ 960
+
+
+* How It Works? | Output
+
+.image images/prompt_flow.png _ 960
+
+Multi-modal models
+
+Mixture of Experts (MoE)
+
+Coding Models
+
+Image Generation
+
+Audio Generation
+
+
+* Sample Project: Python 2048 Web App | Output
+
+
+.image images/2048.png
+
+
+* Sample Project: Python 2048 Web App | Prompt
+
+__My Vibe Coding Prompt__
+
+Assume you're a veteran Python programmer and a client asked you to develop a project for a high school chess club. 
+The project is an interactive game called 2048. If you would like to learn more about the game search web.
+The tech stack for the project is Python programming language, Make, and Python libraries including but not limited to Flask, FastAPI, jija and so on.
+The app is a web app that user can play multiple games with a username. Therefore, you need to keep track of each users game play.
+Make the app as simple a possible and once we give this project to teachers, with only make run command, they should be able to run on a browser. 
+Propose me the game plan and be professional on your decision process and consistent with the steps of the project development.
+
+
+* It's Your Turn (Prompt Challenge)
+
+Let's find a project and Vibe Code together!
+
+
+* About Me
+
+.html about_me.html
+
+
+* Questions ???
+
+.image https://upload.wikimedia.org/wikipedia/commons/c/c8/Question_mark_1.svg _ 480
+
