@@ -1,4 +1,5 @@
 .DS_Store
 2048/*.db
 2048/__pycache__
+2048/uv.lock
 
