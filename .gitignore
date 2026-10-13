@@ -1,5 +1,23 @@
-.DS_Store
-2048/*.db
-2048/__pycache__
-2048/uv.lock
+# Python & Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
 
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Packaging & Builds
+dist/
+build/
+public/
+*.egg-info/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
