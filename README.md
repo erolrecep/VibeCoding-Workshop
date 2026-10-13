@@ -16,6 +16,35 @@ Welcome to the **Vibe Coding Workshop** repository! This workshop introduces a m
 
 ---
 
+## 📋 Workshop Agenda
+
+1. **What is Vibe Coding?**
+   - Redefining the software engineer's role: Architect & Reviewer.
+   - Zero domain knowledge barriers: Exploring Rust, WebGL, or Web Apps with AI.
+   - The feedback loop: Rapid iteration, debugging with stack traces, guided refinement.
+2. **How It Works: The Triad**
+   - **Prompt**: Formulating structured intent.
+   - **Model**: Multi-modal LLMs, Mixture-of-Experts (MoE), coding specialists.
+   - **Output**: Binaries, full applications, scripts, tests.
+3. **Anatomy of an Effective Prompt**
+   - **Persona / Role**: Establishing tone and expertise domain.
+   - **Task / Goal**: Explicit definition of what to build.
+   - **Context**: Tech stack constraints, background data, user expectations.
+   - **Constraints & Guardrails**: Negative constraints, performance bounds, zero-friction running requirements.
+   - **Few-Shot Examples**: Guiding response style and code structure.
+4. **LLM Models & Compute Landscape**
+   - Training vs. Fine-tuning vs. Real-time Inference.
+   - Local LLM inference (LM Studio, Ollama) vs. Cloud APIs (Gemini, Claude, OpenAI).
+   - Compute infrastructure & data centers.
+5. **Sample Project Walkthrough: 2048 Web App**
+   - Deconstructing the prompt that generated the game.
+   - Architectural decisions made by the LLM (Flask, SQLite, vanilla frontend, Make lifecycle).
+6. **Interactive Challenge: Vibe Code Together!**
+   - Live prompt challenge: From blank editor to working software in 15 minutes.
+7. **Q&A and Next Steps**
+
+---
+
 ## 👨‍🏫 Instructor
 
 **Recep Erol, PhD**  
@@ -25,6 +54,41 @@ Welcome to the **Vibe Coding Workshop** repository! This workshop introduces a m
 - 💼 **LinkedIn**: [linkedin.com/in/erolrecep](https://linkedin.com/in/erolrecep)
 - 🐙 **GitHub**: [@erolrecep](https://github.com/erolrecep)
 - 🌐 **Website**: [erolrecep.github.io](https://erolrecep.github.io)
+
+---
+
+## 🎮 Hands-On Demo: 2048 Python Web App
+
+The repository includes a complete, production-ready **2048 Game** created through prompt engineering. It demonstrates full-stack web development with SQLite user persistence, auto-save state synchronization, and leaderboards.
+
+![2048 Game Preview](images/2048.png)
+
+### ⚡ 60-Second Quickstart with `uv`
+
+[`uv`](https://docs.astral.sh/uv/) is Astral's ultra-fast Python package and project manager. It handles virtual environments, Python binaries, and dependencies automatically without manual activation.
+
+```bash
+# Clone the repository (if you haven't already)
+git clone https://github.com/erolrecep/VibeCoding-Workshop.git
+cd VibeCoding-Workshop/2048
+
+# Run directly with uv
+uv run python app.py
+```
+
+*The Flask server starts and automatically launches your browser at `http://127.0.0.1:5000/`.*
+
+### 🛠️ Run via `make`
+
+If you have `make` installed:
+
+```bash
+cd 2048
+make run
+```
+*(The Makefile detects whether `uv` is installed and uses it; otherwise, it sets up a standard Python virtual environment automatically).*
+
+For detailed architecture, database schema, and customization challenges, see the **[2048 App README](file:///Users/erolrecep/Developer/codebase/apps/VibeCoding-Workshop/2048/README.md)**.
 
 ---
 
@@ -79,70 +143,6 @@ python3 -m http.server 8000 -d public
 
 ---
 
-## 🎮 Hands-On Demo: 2048 Python Web App
-
-The repository includes a complete, production-ready **2048 Game** created through prompt engineering. It demonstrates full-stack web development with SQLite user persistence, auto-save state synchronization, and leaderboards.
-
-![2048 Game Preview](images/2048.png)
-
-### ⚡ 60-Second Quickstart with `uv`
-
-[`uv`](https://docs.astral.sh/uv/) is Astral's ultra-fast Python package and project manager. It handles virtual environments, Python binaries, and dependencies automatically without manual activation.
-
-```bash
-# Clone the repository (if you haven't already)
-git clone https://github.com/erolrecep/VibeCoding-Workshop.git
-cd VibeCoding-Workshop/2048
-
-# Run directly with uv
-uv run python app.py
-```
-
-*The Flask server starts and automatically launches your browser at `http://127.0.0.1:5000/`.*
-
-### 🛠️ Run via `make`
-
-If you have `make` installed:
-
-```bash
-cd 2048
-make run
-```
-*(The Makefile detects whether `uv` is installed and uses it; otherwise, it sets up a standard Python virtual environment automatically).*
-
-For detailed architecture, database schema, and customization challenges, see the **[2048 App README](file:///Users/erolrecep/Developer/codebase/apps/VibeCoding-Workshop/2048/README.md)**.
-
----
-
-## 📋 Workshop Agenda
-
-1. **What is Vibe Coding?**
-   - Redefining the software engineer's role: Architect & Reviewer.
-   - Zero domain knowledge barriers: Exploring Rust, WebGL, or Web Apps with AI.
-   - The feedback loop: Rapid iteration, debugging with stack traces, guided refinement.
-2. **How It Works: The Triad**
-   - **Prompt**: Formulating structured intent.
-   - **Model**: Multi-modal LLMs, Mixture-of-Experts (MoE), coding specialists.
-   - **Output**: Binaries, full applications, scripts, tests.
-3. **Anatomy of an Effective Prompt**
-   - **Persona / Role**: Establishing tone and expertise domain.
-   - **Task / Goal**: Explicit definition of what to build.
-   - **Context**: Tech stack constraints, background data, user expectations.
-   - **Constraints & Guardrails**: Negative constraints, performance bounds, zero-friction running requirements.
-   - **Few-Shot Examples**: Guiding response style and code structure.
-4. **LLM Models & Compute Landscape**
-   - Training vs. Fine-tuning vs. Real-time Inference.
-   - Local LLM inference (LM Studio, Ollama) vs. Cloud APIs (Gemini, Claude, OpenAI).
-   - Compute infrastructure & data centers.
-5. **Sample Project Walkthrough: 2048 Web App**
-   - Deconstructing the prompt that generated the game.
-   - Architectural decisions made by the LLM (Flask, SQLite, vanilla frontend, Make lifecycle).
-6. **Interactive Challenge: Vibe Code Together!**
-   - Live prompt challenge: From blank editor to working software in 15 minutes.
-7. **Q&A and Next Steps**
-
----
-
 ## 📁 Repository Structure
 
 ```
@@ -152,9 +152,10 @@ VibeCoding-Workshop/
 │       └── deploy-slides.yml   # Automated GitHub Pages CI/CD workflow
 ├── .gitignore                  # Git exclusions for Python, DB, and builds
 ├── Dockerfile                  # Container definition for Go present slides
-├── Makefile                    # Root helper (optional)
+├── Makefile                    # Root helper commands (slides, export, run-2048)
 ├── README.md                   # Main workshop documentation (this file)
 ├── about_me.html               # Presenter bio snippet embedded in slides
+├── vercel.json                 # Zero-config deployment for Vercel
 ├── vibecoding.slide            # Go present presentation source
 ├── images/                     # Workshop illustrations and screenshots
 │   ├── 2048.png
@@ -178,17 +179,18 @@ VibeCoding-Workshop/
 
 ---
 
-## 🚢 Continuous Deployment to GitHub Pages
+## 🚢 Continuous Deployment & Cloud Hosting
 
+### GitHub Pages (Automated CI/CD)
 This repository is configured with a GitHub Actions workflow ([`.github/workflows/deploy-slides.yml`](file:///Users/erolrecep/Developer/codebase/apps/VibeCoding-Workshop/.github/workflows/deploy-slides.yml)) that:
 1. Triggers on any push to `main` that touches presentation files.
 2. Compiles the Go `present` deck into static HTML, JS, and CSS.
 3. Automatically publishes the bundle to **GitHub Pages**.
 
-### Enabling GitHub Pages in Your Fork / Repo:
-1. Go to your repository settings: **Settings** -> **Pages**.
-2. Under **Build and deployment** -> **Source**, select **GitHub Actions**.
-3. Push to `main` or trigger the workflow manually from the **Actions** tab.
+### Vercel (One-Click Deployment)
+The repository includes a [`vercel.json`](file:///Users/erolrecep/Developer/codebase/apps/VibeCoding-Workshop/vercel.json) configuration. To deploy on Vercel:
+1. Go to [vercel.com](https://vercel.com) and import `erolrecep/VibeCoding-Workshop`.
+2. Click **Deploy** — Vercel builds the slides and gives you a dedicated URL (e.g. `https://vibecoding-workshop.vercel.app`).
 
 ---
 
