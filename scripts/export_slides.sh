@@ -42,14 +42,19 @@ for i in {1..15}; do
     sleep 0.5
 done
 
-# Fetch slide HTML and fix root-relative asset URLs to relative paths
+# Fetch slide HTML and fix root-relative asset URLs, unhide body, and link stylesheet
 curl -s "http://127.0.0.1:${PORT}/vibecoding.slide" \
     | sed 's|src="/static/slides.js"|src="static/slides.js"|g' \
     | sed "s|src='/static/slides.js'|src='static/slides.js'|g" \
+    | sed "s|<body style='display: none'>|<body>|g" \
+    | sed "s|</head>|<link rel='stylesheet' href='static/styles.css'></head>|g" \
     > "${OUTPUT_DIR}/index.html"
 
-# Fetch JavaScript and CSS assets
-curl -s "http://127.0.0.1:${PORT}/static/slides.js" > "${OUTPUT_DIR}/static/slides.js"
+# Fetch JavaScript and CSS assets, making static asset prefix relative for subpaths
+curl -s "http://127.0.0.1:${PORT}/static/slides.js" \
+    | sed "s|var PERMANENT_URL_PREFIX = '/static/';|var PERMANENT_URL_PREFIX = 'static/';|g" \
+    > "${OUTPUT_DIR}/static/slides.js"
+
 curl -s "http://127.0.0.1:${PORT}/static/styles.css" > "${OUTPUT_DIR}/static/styles.css"
 
 # Copy images
