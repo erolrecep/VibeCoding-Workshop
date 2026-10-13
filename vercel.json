@@ -1,0 +1,5 @@
+{
+  "buildCommand": "bash scripts/export_slides.sh public",
+  "outputDirectory": "public",
+  "framework": null
+}
