@@ -26,15 +26,15 @@ Tags: VibeCoding, PromptEngineering, LLMs, FutureOfWork
 
 * What is Vibe Coding?
 
-*Zero Domain Knowledge Required*
+*Zero*Domain*Knowledge*Required*
 \_ You can enter a domain (e.g., WebGL, Rust, Game Physics) with zero prior syntax knowledge. 
 \_ The LLM acts as the implementation layer while you focus on vision and UX.
 
-*Exploration & Rapid Iteration*
+*Exploration*&*Rapid*Iteration*
 \_ Rather than reading documentation for hours, you test ideas immediately by interacting with the model and reviewing live runtime feedback.
 \_ Request different actions from the model i.e fix this issue, make this more transparent, or make the image resize
 
-*Automate Processes*
+*Automate*Processes*
 \_ File Operations
 \_ Send email, sms, social media post
 \_ Make shopping for me
