@@ -20,7 +20,7 @@ Welcome to the **Vibe Coding Workshop** repository! This workshop introduces a m
 
 1. **What is Vibe Coding?**
    - Redefining the software engineer's role: Architect & Reviewer.
-   - Zero domain knowledge barriers: Exploring Rust, WebGL, or Web Apps with AI.
+   - Zero domain knowledge barriers: Exploring C, Python, WebGL, or Web Apps with AI.
    - The feedback loop: Rapid iteration, debugging with stack traces, guided refinement.
 2. **How It Works: The Triad**
    - **Prompt**: Formulating structured intent.
